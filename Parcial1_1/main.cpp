@@ -6,6 +6,10 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello Infoii" << endl;
+    char letra,n;
+    char array[n],code[n],name[n],credits[n],days[n],schedule[n];
+
+
+
     return 0;
 }
