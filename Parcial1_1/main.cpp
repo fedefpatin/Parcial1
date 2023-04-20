@@ -25,3 +25,7 @@ void createSchedule(){
     cout<<"creating schedule"<< endl;
 }
 
+void createCoursesAndCredits(){
+
+    cout<<"creating courses and credits"<<endl;
+}
