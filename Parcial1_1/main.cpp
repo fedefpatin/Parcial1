@@ -6,7 +6,7 @@ using namespace std;
 
 char courseArray[3][10] = {"aaa", "bbb", "ccc"};
 int creditsArray[3] = {5, 4, 2};
-
+int codecourseArray[3] = {2547200,100000,200000};
 
 
 void createSchedule(){
