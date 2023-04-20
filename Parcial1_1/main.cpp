@@ -11,12 +11,12 @@ int creditsArray[3] = {5, 4, 2};
 
 void createSchedule(){
 
-    cout<<"creating schedule"<< endl;
+    cout<<"Creando Programa"<< endl;
 }
 
 void createCoursesAndCredits(){
 
-    cout<<"creating courses and credits"<<endl;
+    cout<<"Creando Materias y Creditos"<<endl;
 }
 
 void readSchedule()
@@ -26,7 +26,7 @@ void readSchedule()
 
     char h[10], l[10], m[10], w[10], j[10], v[10], s[10];
 
-    cout << "Your schedule is:\n"
+    cout << "Su programa es:\n"
          << endl;
 
     while (!fin.eof())
@@ -47,12 +47,12 @@ void readSchedule()
 
 void readCourseAndCredits()
 {
-    cout << "Your courses and credits are:\n"
+    cout << "Sus materias y creditos son:\n"
          << endl;
 
-    cout << "course"
+    cout << "materia"
          << "\t"
-         << "credits" << endl;
+         << "creditos" << endl;
 
     int arraySize = sizeof(creditsArray) / sizeof(int);
     ;
@@ -97,8 +97,8 @@ void createSummary()
             hoursPerWeek = 0;
         }
 
-        cout << "For " << courseArray[i] << " you need " << hoursPerWeek << " hours per week" << endl;
-        fout << "For " << courseArray[i] << " you need " << hoursPerWeek << " hours per week"
+        cout << "Para " << courseArray[i] << " ud necesita " << hoursPerWeek << " horas por semana" << endl;
+        fout << "Para " << courseArray[i] << " ud necesita " << hoursPerWeek << " horas por semana"
              << "\n";
     }
 }
@@ -113,13 +113,15 @@ int main()
         int option;
 
         do {
-            cout << "Welcome to the course registration system. Choose an option:" << endl;
-            cout << "1. Create schedule" << endl;
-            cout << "2. Create courses and credits" << endl;
-            cout << "3. Read schedule" << endl;
-            cout << "4. Read courses and credits" << endl;
-            cout << "5. Create summary" << endl;
-            cout << "0. Exit" << endl;
+            cout << "Registro de programa" << endl;
+            cout << "1. Crear Programa" << endl;
+            cout << "2. Crear materias y creditos" << endl;
+            cout << "3. Registrar HTD" << endl;
+            cout << "4. Registrar HTP" << endl;
+            cout << "5. Mostrar horario" << endl;
+            cout << "6. Mostrar materias y creditos" << endl;
+            cout << "7. Crear y mostrar datos" << endl;
+            cout << "0. Salir" << endl;
 
             cin >> option;
 
@@ -130,13 +132,13 @@ int main()
                 case 2:
                     createCoursesAndCredits();
                     break;
-                case 3:
+                case 5:
                     readSchedule();
                     break;
-                case 4:
+                case 6:
                     readCourseAndCredits();
                     break;
-                case 5:
+                case 7:
                     createSummary();
                     break;
                 case 0:
