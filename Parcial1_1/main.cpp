@@ -110,6 +110,47 @@ int main()
     //char array[n],code[n],name[n],credits[n],days[n],schedule[n];
     //cout<<code<<endl;
 
+        int option;
+
+        do {
+            cout << "Welcome to the course registration system. Choose an option:" << endl;
+            cout << "1. Create schedule" << endl;
+            cout << "2. Create courses and credits" << endl;
+            cout << "3. Read schedule" << endl;
+            cout << "4. Read courses and credits" << endl;
+            cout << "5. Create summary" << endl;
+            cout << "0. Exit" << endl;
+
+            cin >> option;
+
+            switch(option) {
+                case 1:
+                    createSchedule();
+                    break;
+                case 2:
+                    createCoursesAndCredits();
+                    break;
+                case 3:
+                    readSchedule();
+                    break;
+                case 4:
+                    readCourseAndCredits();
+                    break;
+                case 5:
+                    createSummary();
+                    break;
+                case 0:
+                    cout << "Salir" << endl;
+                    break;
+                default:
+                    cout << "Opción invalida." << endl;
+            }
+        } while (option != 0);
+
+
+
+
+
     cout << "**************************************************" << endl;
     createSchedule();
     cout << "**************************************************" << endl;
@@ -121,5 +162,6 @@ int main()
     cout << "**************************************************" << endl;
     createSummary();
     cout << "**************************************************" << endl;
+
     return 0;
 }
