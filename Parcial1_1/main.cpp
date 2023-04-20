@@ -73,3 +73,43 @@ void readCourseAndCredits()
         cout << courseArray[i] << "\t" << creditsArray[i] << endl;
     }
 }
+
+void createSummary()
+{
+    int arraySize = sizeof(creditsArray) / sizeof(int);
+    int hoursPerWeek;
+
+    fstream fout;
+    fout.open("summary.csv", ios::out | ios::trunc);
+
+    cout << "Summary:\n"
+         << endl;
+
+    for (int i = 0; i < arraySize; i++)
+    {
+        if (creditsArray[i] == 5)
+        {
+            hoursPerWeek = ((5 * 48) - (7 * 16)) / 16;
+        }
+        else if (creditsArray[i] == 4)
+        {
+            hoursPerWeek = ((4 * 48) - (4 * 16)) / 16;
+        }
+        else if (creditsArray[i] == 2)
+        {
+            hoursPerWeek = ((2 * 48) - (2 * 16)) / 16;
+        }
+        else if (creditsArray[i] == 0)
+        {
+            hoursPerWeek = ((4 * 48) - (4 * 16)) / 16;
+        }
+        else
+        {
+            hoursPerWeek = 0;
+        }
+
+        cout << "For " << courseArray[i] << " you need " << hoursPerWeek << " hours per week" << endl;
+        fout << "For " << courseArray[i] << " you need " << hoursPerWeek << " hours per week"
+             << "\n";
+    }
+}
