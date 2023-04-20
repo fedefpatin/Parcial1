@@ -9,17 +9,6 @@ int creditsArray[3] = {5, 4, 2};
 
 
 
-int main()
-{
-    //char letra;
-    //int n=1;
-    //char array[n],code[n],name[n],credits[n],days[n],schedule[n];
-    //cout<<code<<endl;
-
-
-    return 0;
-}
-
 void createSchedule(){
 
     cout<<"creating schedule"<< endl;
@@ -112,4 +101,25 @@ void createSummary()
         fout << "For " << courseArray[i] << " you need " << hoursPerWeek << " hours per week"
              << "\n";
     }
+}
+
+int main()
+{
+    //char letra;
+    //int n=1;
+    //char array[n],code[n],name[n],credits[n],days[n],schedule[n];
+    //cout<<code<<endl;
+
+    cout << "**************************************************" << endl;
+    createSchedule();
+    cout << "**************************************************" << endl;
+    createCoursesAndCredits();
+    cout << "**************************************************" << endl;
+    readSchedule();
+    cout << "**************************************************" << endl;
+    readCourseAndCredits();
+    cout << "**************************************************" << endl;
+    createSummary();
+    cout << "**************************************************" << endl;
+    return 0;
 }
