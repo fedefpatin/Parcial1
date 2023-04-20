@@ -55,3 +55,21 @@ void readSchedule()
 
     fin.close();
 }
+
+void readCourseAndCredits()
+{
+    cout << "Your courses and credits are:\n"
+         << endl;
+
+    cout << "course"
+         << "\t"
+         << "credits" << endl;
+
+    int arraySize = sizeof(creditsArray) / sizeof(int);
+    ;
+
+    for (int i = 0; i < arraySize; i++)
+    {
+        cout << courseArray[i] << "\t" << creditsArray[i] << endl;
+    }
+}
